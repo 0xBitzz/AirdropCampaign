@@ -1,0 +1,78 @@
+{
+    "name": "Asset",
+    "methods": [
+        {
+            "name": "create_asset",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "asset_name"
+                },
+                {
+                    "type": "string",
+                    "name": "unit_name"
+                },
+                {
+                    "type": "uint64",
+                    "name": "total_supply"
+                }
+            ],
+            "returns": {
+                "type": "uint64"
+            }
+        },
+        {
+            "name": "opt_in_asset",
+            "args": [
+                {
+                    "type": "axfer",
+                    "name": "txn"
+                },
+                {
+                    "type": "asset",
+                    "name": "_asset"
+                }
+            ],
+            "returns": {
+                "type": "void"
+            }
+        },
+        {
+            "name": "transfer_asset",
+            "args": [
+                {
+                    "type": "uint64",
+                    "name": "amount"
+                },
+                {
+                    "type": "account",
+                    "name": "receiver"
+                },
+                {
+                    "type": "asset",
+                    "name": "_asset"
+                }
+            ],
+            "returns": {
+                "type": "void"
+            }
+        },
+        {
+            "name": "get_balance",
+            "args": [
+                {
+                    "type": "account",
+                    "name": "account"
+                },
+                {
+                    "type": "asset",
+                    "name": "_asset"
+                }
+            ],
+            "returns": {
+                "type": "uint64"
+            }
+        }
+    ],
+    "networks": {}
+}
